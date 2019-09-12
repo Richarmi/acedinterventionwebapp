@@ -1,0 +1,27 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">New Service</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="">Service</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Service Name">
+            </div>
+            <div class="form-group">
+                <label for="">Number of minutes</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Number of Minutes">
+            </div>
+            <div class="form-group">
+                <label for="">Service Date</label>
+                <div>
+                    <uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="inlineOptions"></uib-datepicker>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="submit" ng-click="ok()">Save</button>
+        <button class="btn btn-warning" type="button" ng-click="cancelService()">Cancel</button>
+    </div>
+</div>

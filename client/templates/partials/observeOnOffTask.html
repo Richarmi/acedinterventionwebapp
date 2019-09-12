@@ -1,0 +1,68 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Jonny Simms</h3>
+        <p>Observe On/Off Task</p>
+    </div>
+    <div class="modal-body">
+        <interval-manager interval-manager-config="intervalManagerConfig" ></interval-manager>
+        <div ng-if="intervalManagerConfig.intervalSet===true">
+            <div class="table-labels">
+                <span class="table-label table-label-1 text-positive">Student</span> <span
+                    class="table-label table-label table-label-2 text-dark">Peer</span>
+            </div>
+            <div class="list list-inset">
+                <div class="item item-button-right">
+                    <span class="text-stabler">On-Task</span> <strong>Active</strong>
+                    <button class="button button-offset-right button-outline button-positive" ng-class="{'active':taskDataItem.onTask.active.student===true}" ng-model="taskDataItem.onTask.active.student" ng-click="taskDataItem.onTask.active.student = !taskDataItem.onTask.active.student" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                    <button class="button button-outline button-dark" ng-class="{'active':taskDataItem.onTask.active.peer===true}" ng-model="taskDataItem.onTask.active.peer" ng-click="taskDataItem.onTask.active.peer = !taskDataItem.onTask.active.peer" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                </div>
+                <div class="item item-button-right">
+                    <span class="text-stabler">On-Task</span> <strong>Passive</strong>
+                    <button class="button button-offset-right button-outline button-positive" ng-class="{'active':taskDataItem.onTask.passive.student===true}" ng-model="taskDataItem.onTask.passive.student" ng-click="taskDataItem.onTask.passive.student = !taskDataItem.onTask.passive.student" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                    <button class="button button-outline button-dark" ng-class="{'active':taskDataItem.onTask.passive.peer===true}" ng-model="taskDataItem.onTask.passive.peer" ng-click="taskDataItem.onTask.passive.peer = !taskDataItem.onTask.passive.peer" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="list list-inset">
+                <div class="item item-button-right">
+                    <span class="text-stabler">Off-Task</span> <strong>Motor</strong>
+                    <button class="button button-offset-right button-outline button-positive" ng-class="{'active':taskDataItem.offTask.motor.student===true}" ng-model="taskDataItem.offTask.motor.student" ng-click="taskDataItem.offTask.motor.student = !taskDataItem.offTask.motor.student" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                    <button class="button button-outline button-dark" ng-class="{'active':taskDataItem.offTask.motor.peer===true}" ng-model="taskDataItem.offTask.motor.peer" ng-click="taskDataItem.offTask.motor.peer = !taskDataItem.offTask.motor.peer" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                </div>
+                <div class="item item-button-right">
+                    <span class="text-stabler">Off-Task</span> <strong>Verbal</strong>
+                    <button class="button button-offset-right button-outline button-positive" ng-class="{'active':taskDataItem.offTask.verbal.student===true}" ng-model="taskDataItem.offTask.verbal.student" ng-click="taskDataItem.offTask.verbal.student = !taskDataItem.offTask.verbal.student" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                    <button class="button button-outline button-dark" ng-class="{'active':taskDataItem.offTask.verbal.peer===true}" ng-model="taskDataItem.offTask.verbal.peer" ng-click="taskDataItem.offTask.verbal.peer = !taskDataItem.offTask.verbal.peer" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                </div>
+                <div class="item item-button-right">
+                    <span class="text-stabler">Off-Task</span> <strong>Passive</strong>
+                    <button class="button button-offset-right button-outline button-positive" ng-class="{'active':taskDataItem.offTask.passive.student===true}" ng-model="taskDataItem.offTask.passive.student" ng-click="taskDataItem.offTask.passive.student = !taskDataItem.offTask.passive.student" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                    <button class="button button-outline button-dark" ng-class="{'active':taskDataItem.offTask.passive.peer===true}" ng-model="taskDataItem.offTask.passive.peer" ng-click="taskDataItem.offTask.passive.peer = !taskDataItem.offTask.passive.peer" ng-disabled="enableObservation===false">
+                        <i class="icon ion-checkmark-round text-stable"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="bar bar-footer bar-royal" observation-manager ng-if="intervalManagerConfig.intervalSet===true"></div>
+    </div>
+</div>

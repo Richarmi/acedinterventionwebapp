@@ -1,0 +1,38 @@
+<nav class="navbar navbar-static-top navbar-primary">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href ui-sref="landing">
+                <span class="icon ion-arrow-graph-up-right"></span> ACED Intervention
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active: $state.includes('student')}"><a href ui-sref="student.select">Manage Students</a></li>
+                <li ng-class="{active: $state.includes('account')}"><a ui-sref="account.select">Manage Team</a></li>
+                <li ui-sref-active="active"><a href ui-sref="school.messages">Messages</a></li>
+                <li ui-sref-active="active"><a href ui-sref="school.resources">Resources</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right acme-navbar-text">
+                <li uib-dropdown>
+                    <a href uib-dropdown-toggle>My Shortcuts <span class="caret"></span></a>
+                    <ul uib-dropdown-menu>
+                        <li><a href="#">Attendance</a></li>
+                        <li><a href="#">School Email</a></li>
+                        <li><a href="#">Special Education</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href ui-sref="my.shortcuts">Manage Shortcuts</a></li>
+                    </ul>
+                </li>
+                <li uib-dropdown>
+                    <a href uib-dropdown-toggle>My Account <span class="caret"></span></a>
+                    <ul uib-dropdown-menu>
+                        <li><a href ui-sref="my.profile">Profile</a></li>
+                        <li><a href ui-sref="landing">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

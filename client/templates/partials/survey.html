@@ -1,0 +1,142 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title" ng-if="viewMode=='list'">Requested Surveys</h3>
+        <h3 class="modal-title" ng-if="viewMode=='new'">Request a Survey</h3>
+        <p></p>
+    </div>
+
+    <div class="modal-body">
+        <div class="list-group" ng-if="viewMode=='list'">
+            <div class="list-group-item clearfix"><!--use .active class if needed-->
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">Sarah Andrews & 3 others</h4>
+                    <p class="list-group-item-text">Requested daily at noon.</p>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                    <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                </div>
+            </div>
+            <div class="list-group-item clearfix"><!--use .active class if needed-->
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">Kamini Mathews & 4 others</h4>
+                    <p class="list-group-item-text">Requested daily at 8:30am.</p>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                    <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                </div>
+            </div>
+            <div class="list-group-item clearfix"><!--use .active class if needed-->
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">Chris Jensen</h4>
+                    <p class="list-group-item-text">Requested daily at 20m.</p>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                    <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                </div>
+            </div>
+        </div>
+        <form ng-if="viewMode=='new'">
+            <h4>Recipients</h4>
+            <div class="scroll-container scroll-container-md">
+                <div class="list-group">
+                    <div class="list-group-item clearfix"><!--use .active class if needed-->
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Sarah Andrews</h4>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                    <div class="list-group-item clearfix"><!--use .active class if needed-->
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Kamini Mathews</h4>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                    <div class="list-group-item clearfix"><!--use .active class if needed-->
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Chris Jensen</h4>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                    <div class="list-group-item clearfix"><!--use .active class if needed-->
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Stephen Cooper</h4>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                    <div class="list-group-item clearfix"><!--use .active class if needed-->
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Kate Nansing</h4>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                    <div class="list-group-item clearfix"><!--use .active class if needed-->
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Kal Penn</h4>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                    <div class="list-group-item clearfix"><!--use .active class if needed-->
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Zoey Bernard</h4>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Name:</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="">Email:</label>
+                <input type="email" class="form-control" id="" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary ml-10" type="submit"><i class="icon ion-plus-round"></i> Add Recipient</button>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    Daily at noon
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Fridays at noon
+                </label>
+            </div>
+            <div class="radio disabled">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                    Last Friday of the month at noon
+                </label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit" ><i class="icon ion-plus-round"></i> Add New Survey Request</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="submit" ng-if="viewMode=='list'" ng-click="setViewMode('new')">Request a New Survey</button>
+        <button class="btn btn-primary" type="submit" ng-if="viewMode=='new'">Done</button>
+        <button class="btn btn-warning pull-left" type="button" ng-click="cancelSurvey()">Cancel</button>
+    </div>
+</div>

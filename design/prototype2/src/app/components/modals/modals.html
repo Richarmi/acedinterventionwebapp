@@ -1,0 +1,459 @@
+<!--
+Modals are all in one page as a way to work on them all at once.
+I used a grid to contain them, you can grab the code inside the gride and use it
+-->
+
+<div class="row">
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">Enter a new intervention</h3>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="">Intervention</label>
+                    <input type="text" class="form-control" id="" placeholder="Enter Intervention Name">
+                  </div>
+                  <div class="form-group">
+                    Place Angular UI Date Picker Here
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                  <button class="btn btn-primary" type="submit" ng-click="ok()">Save</button>
+                  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+              </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">Manage Surveys</h3>
+        </div>
+        <div class="modal-body clearfix">
+          <h4>Requested Surveys</h4>
+          <hr>
+          <div class="list-group">
+            <div class="list-group-item clearfix"><!--use .active class if needed-->
+              <div class="pull-left">
+                <h4 class="list-group-item-heading">Sarah Andrews</h4>
+                <p class="list-group-item-text">Requested daily at noon.</p>
+              </div>
+              <div class="pull-right">
+                <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+              </div>
+            </div>
+            <div class="list-group-item clearfix"><!--use .active class if needed-->
+              <div class="pull-left">
+                <h4 class="list-group-item-heading">Sarah Andrews</h4>
+                <p class="list-group-item-text">Requested daily at 8:30am.</p>
+              </div>
+              <div class="pull-right">
+                <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+              </div>
+            </div>
+            <div class="list-group-item clearfix"><!--use .active class if needed-->
+              <div class="pull-left">
+                <h4 class="list-group-item-heading">Sarah Andrews</h4>
+                <p class="list-group-item-text">Requested daily at 20m.</p>
+              </div>
+              <div class="pull-right">
+                <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">Add a New Behavior</button>
+            <button class="btn btn-warning" type="button">Done</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">Request a Survey</h3>
+        </div>
+        <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="">Name:</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Name">
+              </div>
+              <div class="form-group">
+                <label for="">Email:</label>
+                <input type="email" class="form-control" id="" placeholder="Enter Email">
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  Daily at noon
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  Fridays at noon
+                </label>
+              </div>
+              <div class="radio disabled">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                  Last Friday of the month at noon
+                </label>
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">Send</button>
+            <button class="btn btn-warning pull-left" type="button">Cancel</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">New Students/Jonny Simms</h3>
+        </div>
+        <div class="modal-body">
+            <h4>Step 1 of 4</h4>
+            <p>Enter student name, grade and upload a picture.</p>
+            <form>
+              <div class="form-group">
+                <label for="">Student Name:</label>
+                <input type="text" class="form-control" id="" placeholder="Enter Student Name">
+              </div>
+              <div class="form-group">
+                <label for="">Grade:</label>
+                <select class="form-control">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Brochure File</label>
+                <div>
+                  <input id="uploadFile" class="form-control inline-block width-70" placeholder="Choose File" disabled="disabled" />
+                  <div class="fileUpload btn btn-primary">
+                      <span>Upload</span>
+                      <input id="uploadBtn" type="file" class="upload" />
+                  </div>
+                </div>
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">Next</button>
+            <button class="btn btn-warning pull-left" type="button">Cancel</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">New Students / Jonny Simms</h3>
+        </div>
+        <div class="modal-body clearfix">
+          <h4>Step 2 of 4</h4>
+          <p>Earcu felis vestibulum enim, ac egestas diam massa at elit.</p>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              <strong>Challenging Behavior</strong><br>
+              Aliquam a enim lobortis, vehicula elit eget, sagittis eros. Etiam vitae mi suscipit, condimentum lorem. Sed dapibus, nisl at suscipit volutpat, arcu felis vestibulum enim, ac egestas diam massa at elit. Aenean cursus, nibh eu convallis iaculis, mi velit faucibus urna, ut egestas purus ante ac sem. Proin auctor, felis non ullamcorper condimentum, massa tortor consequat elit, id malesuada neque elit quis nulla. Sed et mi eu massa convallis varius a in ligula. Duis turpis leo, auctor vel purus efficitur, euismod sollicitudin nulla.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              <strong>Option two can be something</strong>
+              Aliquam a enim lobortis, vehicula elit eget, sagittis else and selecting it will deselect option one
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary pull-right" type="button">Next</button>
+            <button class="btn btn-warning pull-left" type="button">Prev</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">New Students / Jonny Simms</h3>
+        </div>
+        <div class="modal-body clearfix">
+          <h4>Step 3 of 4</h4>
+          <p>Earcu felis vestibulum enim, ac egestas diam massa at elit.</p>
+          <div class="list-group">
+            <div class="list-group-item"><!--use .active class if needed-->
+              <div class="clearfix">
+                <div class="pull-left">
+                  <h4 class="list-group-item-heading">Biting</h4>
+                </div>
+                <div class="pull-right">
+                  <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                  <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                </div>
+              </div>
+              <hr>
+              <p>Maecenas laoreet sit amet lacus a convallis. Nam commodo porta quam a cursus. Curabitur dictum nibh aliquet quam condimentum laoreet. Praesent bibendum velit ut hendrerit dictum. Cras sed placerat felis, viverra lobortis massa. Donec blandit ante vel leo vehicula, in pharetra mi convallis.</p>
+              <h5>Tools</h5>
+              <ul class="list-inline">
+                <li>Frequency and Duration</li>
+                <li>ABC</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary pull-right" type="submit">Add a New Behavior</button>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary pull-right" type="button">Next</button>
+          <button class="btn btn-warning pull-left" type="button">Prev</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">New Students / Jonny Simms</h3>
+        </div>
+        <div class="modal-body">
+          <h4>Step 3 of 4</h4>
+          <p>Earcu felis vestibulum enim, ac egestas diam massa at elit.</p>
+          <hr>
+          <h4>Add New Behavior</h4>
+          <hr>
+          <form>
+            <div class="form-group">
+              <label for="">Behavior Title:</label>
+              <input type="text" class="form-control" id="" placeholder="Enter Behavior Title">
+            </div>
+            <div class="form-group">
+              <label for="">Operational Definition:</label>
+              <textarea class="form-control" rows="3" placeholder="Type in give tip here"></textarea>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Freqency and Duration
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                ABC
+              </label>
+            </div>
+            <div class="radio disabled">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                On / Off Task
+              </label>
+            </div>
+          </form>
+          <button class="btn btn-primary btn-block" type="submit"><i class="icon ion-plus-round"></i> Add</button>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button">Next <i class="icon ion-arrow-right-b"></i></button>
+            <button class="btn btn-warning pull-left" type="button"><i class="icon ion-arrow-left-b"></i> Prev</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">New Students / Jonny Simms</h3>
+        </div>
+        <div class="modal-body">
+          <h4>Step 4 of 4</h4>
+          <p>Earcu felis vestibulum enim, ac egestas diam massa at elit.</p>
+          <hr>
+          <div class="list-group">
+            <div class="list-group-item"><!--use .active class if needed-->
+              <div class="clearfix">
+                <div class="pull-left">
+                  <h4 class="list-group-item-heading">Josh Bezdek</h4>
+                  <p>Para</p>
+                </div>
+                <div class="pull-right">
+                  <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="">Add Caregiver:</label>
+              <input type="text" class="form-control" id="" placeholder="Enter Caregiver">
+            </div>
+            <button class="btn btn-primary btn-block" type="submit"><i class="icon ion-plus-round"></i> Add</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button">Next <i class="icon ion-arrow-right-b"></i></button>
+            <button class="btn btn-warning pull-left" type="button"><i class="icon ion-arrow-left-b"></i> Prev</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">Manage Surveys</h3>
+        </div>
+        <div class="modal-body clearfix">
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">Add a New Behavior</button>
+            <button class="btn btn-warning" type="button">Done</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">Manage Surveys</h3>
+        </div>
+        <div class="modal-body">
+          <!-- Modal Starts Here-->
+          <div>
+              <div class="modal-header">
+                  <h3 class="modal-title">New Students / Jonny Simms</h3>
+              </div>
+              <div class="modal-body clearfix">
+                <h4>My Shortcuts</h4>
+                <hr>
+                <div class="list-group">
+                  <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                      <div class="pull-left">
+                        <h4 class="list-group-item-heading">School Email</h4>
+                      </div>
+                      <div class="pull-right">
+                        <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                        <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                      <div class="pull-left">
+                        <h4 class="list-group-item-heading">Attendance</h4>
+                      </div>
+                      <div class="pull-right">
+                        <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                        <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                      <div class="pull-left">
+                        <h4 class="list-group-item-heading">Special Edu Resource</h4>
+                      </div>
+                      <div class="pull-right">
+                        <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                        <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Add a New Behavior</button>
+              </div>
+              <div class="modal-footer">
+                  <button class="btn btn-warning" type="button">Done</button>
+              </div>
+            </div>
+            <!-- Modal Ends Here-->
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">Manage Surveys</h3>
+        </div>
+        <div class="modal-body clearfix">
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">Add a New Behavior</button>
+            <button class="btn btn-warning" type="button">Done</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+  <div class="col-sm-6" style="height: 630px;">
+
+    <!-- Modal Starts Here-->
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title">Manage Surveys</h3>
+        </div>
+        <div class="modal-body clearfix">
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">Add a New Behavior</button>
+            <button class="btn btn-warning" type="button">Done</button>
+        </div>
+      </div>
+      <!-- Modal Ends Here-->
+
+  </div><!--end col-->
+</div>

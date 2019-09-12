@@ -1,0 +1,106 @@
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<div class="profile-panel">
+    <div class="row">
+        
+        <div class="col-sm-2">
+            <div class="well">
+                <img class="img-responsive" ng-src="{{studentModel.profilePicture.url}}">
+            </div>
+        </div>    
+
+        <div class="col-sm-6 moveright">
+            <div class="btn-toolbar">
+                <h3 style="text-align:right">FBA Reports</h3>
+                <button class="btn btn-primary pull-right" ng-click="changeStudent()"><i class="icon ion-backspace"></i> Add New FBA Report</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-left:0">
+    <!-- Begin Step 1-->
+    <div class="col-sm-9" style="border: groove; border-color: red">
+        This is the main section
+        <h4 class="pull-left" style="margin-bottom: 15px">Function Behavior Assessment</h4>
+        
+        <div class="row-12"> <!-- Section Title-->
+            <h3 class="pull-left" style="margin-left:0;">Introduction</h3>
+            
+            <div class="row" style="border: dashed; border-color: black; margin-bottom: 10px;">
+                Box For Chart or video
+            </div>
+            
+            <div class="row">
+                Row for a slide scale for user to select
+            </div>
+            <div class="row" style="color: orange; border: groove; border-color: orange; margin-bottom: 10px;">
+                Box with Instructions
+            </div>
+            <div class="row" style="color: green; border: groove; border-color: green; margin-bottom: 10px;">
+                Box with text area Entry box for writing the analysis
+                    
+                    <div class="form-group">
+                     <label for="comment">Comment:</label>
+                     <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div> 
+            </div>
+            <div class="row" style="color: blue; border: groove; border-color: blue; margin-bottom: 10px;">
+                Box with Instructions
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-3" style="border: double; border-color: purple">
+        <div class="">
+            
+            <div class="panel panel-primary relative">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Check List</div>
+                <!-- List group -->
+                Content for the list panel
+                
+                <div class="form-check">
+                     <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="">Option 1
+                     </label>
+                </div>
+                <div class="form-check">
+                     <label class="form-check-label">
+                       <input type="checkbox" class="form-check-input" value="">Option 2
+                     </label>
+                </div>
+                <div class="form-check">
+                     <label class="form-check-label">
+                       <input type="checkbox" class="form-check-input" value="" disabled>Option 3
+                     </label>
+                </div> 
+            </div>
+            <br>
+            
+            <div class="panel panel-primary relative">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Forms</div>
+                <!-- List group -->
+                Content for the forms panel
+                
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Dropdown Button
+                        </button>
+                            
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 4</a>
+                          <a class="dropdown-item" href="#">Link 5</a>
+                          <a class="dropdown-item" href="#">Link 6</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Step 1 -->
+</div>

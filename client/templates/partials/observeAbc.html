@@ -1,0 +1,55 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Jonny Simms</h3>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h4>Observe ABC</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h5>1. Select Behavior</h5>
+          <label class="radio-inline" ng-repeat="abcBehavior in abcItems.abcBehaviors">
+            <input type="radio" name="group" ng-disabled="enableObservation===false" ng-model="abcBehavior.checked" value="true"> {{abcBehavior.title}}
+          </label>
+          <hr>
+          <h5>2. Select Antecedent</h5>
+          <div class="checkbox" ng-repeat="abcAntecedent in abcItems.abcAntecedents">
+            <label>
+              <input type="checkbox" ng-disabled="enableObservation===false" ng-model="abcAntecedent.checked">
+              {{abcAntecedent.title}}
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="abcItems.userTyped.abcAntecedent.checked">
+              <input type="text" class="form-control" placeholder="Enter an Antecedent" ng-model="abcItems.userTyped.abcAntecedent.title" ng-disabled="enableObservation===false" ng-change="setUserTyped('a')">
+            </label>
+          </div>
+          <hr>
+          <h5>3. Select Consequence</h5>
+          <div class="checkbox" ng-repeat="abcConsequence in abcItems.abcConsequences">
+            <label>
+              <input type="checkbox" ng-disabled="enableObservation===false" ng-model="abcConsequence.checked">
+              {{abcConsequence.title}}
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="abcItems.userTyped.abcConsequence.checked">
+              <input type="text" class="form-control" placeholder="Enter a Consequence" ng-model="abcItems.userTyped.abcConsequence.title" ng-disabled="enableObservation===false" ng-change="setUserTyped('c')">
+            </label>
+          </div>
+          <hr>
+          <button class="btn btn-primary btn-block" anchor-scroll="topOfAbc" scroll-action="click" ng-click="recordABC()" ng-disabled="enableObservation===false">Record ABC</button>
+
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <div class="bar bar-footer bar-royal" observation-manager></div>
+    </div>
+</div>

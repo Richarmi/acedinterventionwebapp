@@ -1,0 +1,67 @@
+<div>
+  <div class="navbar navbar-static-top navbar-primary text-center">
+    <h1 class="logo-primary">ACED<br>Intervention</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="well mt-20">
+          <h2 class="form-title">Login to Your Account</h2>
+          <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" autofocus>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="$root.goTo('student.select')">Sign in</button>
+                </div>
+
+          </form><!-- /form -->
+          <a href="#" class="forgot-password">Forgot the password?</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-sm-offset-1">
+        <div class="well mt-20">
+          <form action='' method="POST">
+            <fieldset>
+              <h2 class="form-title">Register</h2>
+              <div class="form-group">
+                <!-- E-mail -->
+                <label class="form-label" for="email">E-mail address</label>
+                <input type="text" id="email" name="email" placeholder="Email" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <!-- Password-->
+                <label class="form-label" for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                <p class="help-block">Password should be at least 8 characters</p>
+              </div>
+
+              <div class="form-group">
+                <!-- Password -->
+                <label class="form-label"  for="password_confirm">Password (Confirm)</label>
+                <input type="password" id="password_confirm" name="password_confirm" placeholder="Password Again" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <!-- Button -->
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="$root.goTo('student.select')">Register</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <!--temp link-->
+    <div class="text-center">
+        <a ui-sref="student.select">Student Selection</a>
+    </div>
+    <!--end temp link-->
+  </div>
+</div>

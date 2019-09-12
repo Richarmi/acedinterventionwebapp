@@ -1,0 +1,38 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Jonny Smith <span class="modal-subtitle">/ Daily Behavior Sheet</span></h3>
+    </div>
+    <div class="modal-body">
+        <form>
+          <div class="btn-group text-center" role="group" aria-label="...">
+            <button type="button" class="btn btn-default btn-success">Subject 1</button>
+            <button type="button" class="btn btn-default btn-success">Subject 2</button>
+            <button type="button" class="btn btn-default btn-success">Subject 3</button>
+            <button type="button" class="btn btn-default btn-success">Subject 4</button>
+            <button type="button" class="btn btn-default btn-danger">Subject 5</button>
+            <button type="button" class="btn btn-default btn-danger">Subject 6</button>
+            <button type="button" class="btn btn-default btn-danger">Subject 7</button>
+            <button type="button" class="btn btn-default btn-danger">Subject 8</button>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <h4>1. <strong>Paying Attention</strong> to Academics & <strong>Working</strong> on Classwork...</h4>
+              <ion-range-slider slider-type="single" min="0" max="100" from=""  prefix="" postfix="%" max-postfix="+" grid_snap="true" grid="true" disable="false" on-finish="sliderSet"></ion-range-slider>
+              <hr>
+              <h4>2. Following Directions the 1st Time...</h4>
+              <ion-range-slider slider-type="single" min="0" max="100" from=""  prefix="" postfix="%" max-postfix="+" grid_snap="true" grid="true" disable="false" on-finish="sliderSet"></ion-range-slider>
+              <hr>
+              <h4>3. Speaking Respectfully to Adults & Students...</h4>
+              <ion-range-slider slider-type="single" min="0" max="100" from=""  prefix="" postfix="%" max-postfix="+" grid_snap="true" grid="true" disable="false" on-finish="sliderSet"></ion-range-slider>
+            </div>
+          </div>
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning pull-left" type="button" ng-click="cancelDailyBehaviorSheet()">Cancel</button>
+        <button class="btn btn-primary pull-right" type="submit">Save</button>
+
+    </div>
+</div>

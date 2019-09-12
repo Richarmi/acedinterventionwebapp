@@ -1,0 +1,4 @@
+<div><timer autostart="false" interval="1000">{{hhours}}:{{mminutes}}:{{sseconds}}</timer></div>
+<button class="btn btn-warning pull-left" type="button" ng-click="cancelObservation()">Cancel</button>
+<button ng-if="observationStarted===true" class="btn btn-warning" ng-click="endObservation()">Finish Observation</button>
+<button ng-if="observationStarted===false" class="btn btn-primary" ng-click="startObservation()">Start Observation</button>

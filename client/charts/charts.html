@@ -1,0 +1,108 @@
+<!doctype html>
+<html ng-app="acedIntervention">
+<head>
+    <meta charset="utf-8">
+    <title>Aced Intervention</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script>
+    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
+</head>
+<body>
+<!--<div id="image"></div>-->
+<div id="container" style="height: 400px;" ></div>
+
+<canvas id="canvas" width="200px" height="200px"></canvas>
+
+<script language="JavaScript">
+
+    var chart =  new Highcharts.Chart({
+        chart: {
+            type: 'spline',
+            width: 200,
+            height:100,
+            renderTo: 'container'
+        },
+        title: {
+            text: 'Negative Behaviors Over Time',
+            style:{ "color": "#333333", "fontSize": "5px",fontWeight: 'bold' }
+        },
+        subtitle: {
+            text: 'FRQ Data'
+        },
+        xAxis: {
+            categories: ['Aug', 'Sept', 'Oct', 'Nov', 'Dec', 'Jan',
+                'Feb', 'March', 'April', 'May', 'June']},
+        yAxis: {
+            title: {
+                text: 'Average FRQ Rate / Day'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value ;
+                }
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: 'Verbal Aggression',
+            style:{ "color": "#333333", "fontSize": "2px",fontWeight: 'bold' },
+            marker: {
+                symbol: 'square'
+            },
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+                y: 26.5,
+                name:  'New Intervention',
+                marker: {
+                    symbol: 'url(http://cdn.shopify.com/s/files/1/0450/8877/t/8/assets/pin.svg?14977623644183712911)'
+                }
+            }, 23.3, 18.3, 13.9]
+
+        }, {
+            name: 'Physical Aggression',
+            style:{ "color": "#333333", "fontSize": "2px",fontWeight: 'bold' },
+            marker: {
+                symbol: 'diamond'
+            },
+            data: [{
+                y: 3.9,
+                marker: {
+                    symbol: 'circle'
+                }
+            }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6]
+        }]
+    });
+
+    var svg = chart.getSVG();
+    canvg(document.getElementById('canvas'), svg);
+    var canvas = document.getElementById("canvas");
+    var img = canvas.toDataURL("image/png");
+    document.write('<img src="'+img+'"/>');
+    //document.getElementById('image').innerHTML += '<img src="'+img+'"/>';
+</script>
+</body>
+</html>

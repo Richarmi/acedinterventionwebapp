@@ -1,0 +1,6 @@
+[2019-08-26 17:09:04.881] [INFO] server - Running in dev mode @ http://localhost:3000
+[2019-09-11 14:03:23.126] [INFO] server - Running in dev mode @ http://localhost:3000
+[2019-09-11 14:03:37.238] [INFO] server - ::1 - GET /config/1.0.0/desktop 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0 - 9229 23 ms
+[2019-09-11 14:03:38.836] [ERROR] server - ::1 - GET /favicon.ico 404 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0 - 24 18 ms
+[2019-09-11 14:07:17.731] [INFO] server - Running in dev mode @ http://localhost:3000
+[2019-09-11 14:07:31.716] [INFO] server - ::1 - GET /config/1.0.0/desktop 200 - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0 - 9229 41 ms

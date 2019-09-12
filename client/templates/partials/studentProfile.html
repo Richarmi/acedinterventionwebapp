@@ -1,0 +1,438 @@
+<div>
+    <div class="modal-header">
+        <h5 class="modal-title">Edit Student Profile</h5>
+        <h5 class="pin pin-top-right-corner step-title">{{studentProfile.step}} of 5</h5>
+    </div>
+    <div class="modal-body">
+        <form name="studentProfileStepOne" ng-if="studentProfile.step==1">
+          <h4 class="title-w-btn">Manange Student Information</h4>
+            <div class="form-group">
+                <label for="">Student Name:</label>
+                <input type="text" class="form-control" id="" placeholder="Populate with studentName">
+            </div>
+            <div class="form-group">
+                <label for="">Grade:</label>
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Brochure File</label>
+                <div>
+                    <input id="uploadFile" class="form-control inline-block width-70" placeholder="Choose File" disabled="disabled" />
+                    <div class="fileUpload btn btn-primary">
+                        <span>Upload</span>
+                        <input id="uploadBtn" type="file" class="upload" />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form name="studentProfileStepTwo" ng-if="studentProfile.step==2">
+            <h4>Select a behavior profile.</h4>
+            <div class="scroll-container scroll-container-md">
+                <div class="radio">
+                  <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      <h4 class="mt-2">Conduct Problem</h4>
+                      <div class="row">
+                          <div class="col-sm-6">
+                            <h5>Characteristic Behaviors</h5>
+                            <ul>
+                                <li>Argues with teachers, parents, and other adults</li>
+                                <li>Can be cruel or mean to others</li>
+                                <li>Can be defiant, challenge authority</li>
+                                <li>Knowingly destroys property</li>
+                                <li>Is disobedient</li>
+                                <li>Doesn&rsquo;t feel guilty after misbehaving</li>
+                                <li>Gets into physical fights</li>
+                                <li>Physically attacks others</li>
+                                <li>Runs away from adults, teachers, and other authority figures</li>
+                                <li>Steals</li>
+                                <li>Talks back to parents, teachers, and other adults</li>
+                                <li>Threatens people</li>
+                                <li>Violates rules</li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-6">
+                            <h5>Associated Disorders</h5>
+                            <ul>
+                                <li>Conduct Disorder</li>
+                                <li>Emotionally Disturbed</li>
+                                <li>Reactive Attachment Disorder</li>
+                                <li>AD/HD</li>
+                                <li>Asperger&#39;s Syndrome</li>
+                                <li>Oppositional Defiance Disorder</li>
+                                <li>Developmental Trauma Disorder</li>
+                            </ul>
+                          </div>
+                      </div>
+
+
+                  </label>
+                </div>
+              <hr>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <h4 class="mt-2">Insecure / Anxious</h4>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                              <h5>Characteristic Behaviors</h5>
+                              <ul>
+                                  <li>Overly sensitive (I)</li>
+                                  <li>Exaggerates abilities and achievements (I)</li>
+                                  <li>Feelings easily hurt (I)</li>
+                                  <li>Feels others are against him/her (I)</li>
+                                  <li>Feels worthless or inferior (I)</li>
+                                  <li>Nervous or tense </li>
+                                  <li>Overly anxious to please others</li>
+                                  <li>Says no one likes him or her</li>
+                                  <li>Self-conscious, easily embarrassed</li>
+                                  <li>Shifts rapidly from topic to topic when talking</li>
+                                  <li>Sulks, is sullen and moody</li>
+                                  <li>Talks too much or too loud</li>
+                                  <li>Is too fearful or anxious</li>
+                                  <li>Is frequently worrying</li>
+                                  <li>Argues with other kids often</li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-6">
+                              <h5>Associated Disorders</h5>
+                              <ul>
+                                  <li>Generalized Anxiety Disorder</li>
+                                  <li>Social Anxiety Disorder</li>
+                                  <li>Depressive Disorders</li>
+                                  <li>Obsessive-Compulsive Disorder</li>
+                                  <li>Developmental Trauma Disorder</li>
+                                  <li>Asperger&rsquo;s Syndrome</li>
+                              </ul>
+                            </div>
+                        </div>
+
+
+                    </label>
+                </div>
+                <hr>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <h4 class="mt-2">Hyperactive</h4>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                              <h5>Characteristic Behaviors</h5>
+                              <ul>
+                                  <li>Has difficulty concentrating</li>
+                                  <li>Fails to finish things he or she starts</li>
+                                  <li>Fidgets, wiggles, squirms</li>
+                                  <li>Is overactive, does not sit still</li>
+                                  <li>Is overly excited, exuberant</li>
+                                  <li>Repeats the same sound, word, or phrase over and over</li>
+                                  <li>Is restless, has a high energy level</li>
+                                  <li>Has a short attention span</li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-6">
+                              <h5>Associated Disorders</h5>
+                              <ul>
+                                  <li>AD/HD</li>
+                                  <li>ASD</li>
+                                  <li>BiPolar Disorder</li>
+                                  <li>Executive Dysfunction</li>
+                                  <li>TBI</li>
+                              </ul>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <hr>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <h4 class="mt-2">Self-Injury / Stereotypic</h4>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                              <h5>Characteristic Behaviors</h5>
+                              <ul>
+                                  <li>Hits or slaps own hands, head, or other body parts</li>
+                                  <li>Rocks body and/or head back and forth</li>
+                                  <li>Harms self by scratching skin or pulling hair</li>
+                                  <li>Repeatedly flaps or waves hands, fingers, or objects (such as pieces of string)</li>
+                                  <li>Gouges self, puts things in nose, ears, etc., or eats inedible things</li>
+                                  <li>Repeatedly bites self hard enough to leave teeth marks or break skin</li>
+                                  <li>Physically harms or hurts self on purpose</li>
+                                  <li>Threatens to harm self</li>
+                                  <li>Engages in meaningless, repetitive behavior</li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-6">
+                              <h5>Associated Disorders</h5>
+                              <ul>
+                                  <li>ASD</li>
+                                  <li>Severe intellectual disability</li>
+                                  <li>Multiple disabilities</li>
+                                  <li>Sensory processing disorder</li>
+                              </ul>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <hr>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <h4 class="mt-2">Self-Isolated / Ritualistic</h4>
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <h5>Characteristic Behaviors</h5>
+                            <ul>
+                                <li>Is apathetic or unmotivated</li>
+                                <li>Has rituals such as head rolling or pacing</li>
+                                <li>Is shy around others, bashful</li>
+                                <li>Isolates self from others</li>
+                                <li>Refuses to talk</li>
+                                <li>Is secretive, keeps things to his/her self</li>
+                                <li>Is shy, exhibits timid behavior</li>
+                                <li>Has odd or repetitive behaviors (stares, grimaces, rigid posture)</li>
+                                <li>Is underactive, is slow </li>
+                                <li>Is unhappy or sad</li>
+                                <li>Is withdrawn, uninvolved with others</li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-6">
+                            <h5>Associated Disorders</h5>
+                            <ul>
+                                <li>Asperger&#39;s Syndrome</li>
+                                <li>Social Anxiety Disorder</li>
+                                <li>Depressive Disorders</li>
+                                <li>Obsessive Compulsive Disorder</li>
+                                <li>TBI</li>
+                                <li>Schizophrenia </li>
+                                <li>Developmental Trauma Disorder</li>
+                            </ul>
+                          </div>
+                        </div>
+                    </label>
+
+                </div>
+                <hr>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        <h4 class="mt-2">Irritable</h4>
+                        <div class="row">
+                            <div class="col-sm-6">
+                              <h5>Characteristic Behaviors</h5>
+                              <ul>
+                                  <li>Is often crying, has tearful episodes</li>
+                                  <li>Is easily frustrated</li>
+                                  <li>Is explosive, easily angered</li>
+                                  <li>Is irritable</li>
+                                  <li>Experiences sudden changes in mood</li>
+                                  <li>Has temper tantrums</li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-6">
+                              <h5>Associated Disorders</h5>
+                              <ul>
+                                  <li>AD/HD</li>
+                                  <li>BiPolar Disorder</li>
+                                  <li>ASD</li>
+                                  <li>Developmental Trauma Disorder</li>
+                              </ul>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <form name="studentProfileStepTwo" ng-if="studentProfile.step==3 && studentProfile.mode=='listBehavior'">
+
+            <div class="list-group">
+              <h4 class="title-w-btn">Manange Behaviors</h4>
+              <div class="scroll-container scroll-container-md">
+                <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading title-w-btn">Disrupting</h4>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>Maecenas laoreet sit amet lacus a convallis. Nam commodo porta quam a cursus. Curabitur dictum nibh aliquet quam condimentum laoreet. Praesent bibendum velit ut hendrerit dictum. Cras sed placerat felis, viverra lobortis massa. Donec blandit ante vel leo vehicula, in pharetra mi convallis.</p>
+                    <h5>Tools</h5>
+                    <ul class="list-inline">
+                        <li>Frequency and Duration</li>
+                        <li>ABC</li>
+                    </ul>
+                </div>
+                <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Title Two</h4>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-edit"></i></button>
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>Maecenas laoreet sit amet lacus a convallis. Nam commodo porta quam a cursus. Curabitur dictum nibh aliquet quam condimentum laoreet. Praesent bibendum velit ut hendrerit dictum. Cras sed placerat felis, viverra lobortis massa. Donec blandit ante vel leo vehicula, in pharetra mi convallis.</p>
+                    <h5>Tools</h5>
+                    <ul class="list-inline">
+                        <li>Frequency and Duration</li>
+                        <li>ABC</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit" ng-click="setMode('addNewBehavior')">+ Add a New Behavior</button>
+        </form>
+        <form name="studentProfileStepTwo" ng-if="studentProfile.step==3 && studentProfile.mode=='addNewBehavior'">
+            <h4>Add New Behavior</h4>
+            <div class="form-group">
+                <label for="">Behavior Title:</label>
+                <input type="text" class="form-control" placeholder="Enter Behavior Title">
+            </div>
+            <div class="form-group">
+                <label for="">Operational Definition:</label>
+                <textarea class="form-control" rows="3" placeholder="Type in give tip here"></textarea>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="optionsRadios" id="optionscheckbox1" value="option1" checked>
+                        Freqency and Duration
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="optionsRadios" id="optionscheckbox2" value="option2">
+                        ABC
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="optionsRadios" id="optionscheckbox3" value="option3" disabled>
+                        On / Off Task
+                    </label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="optionsRadios" id="optionscheckbox4" value="option1" checked>
+                        Daily Behavior Sheet
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="optionsRadios" id="optionscheckbox5" value="option2">
+                        Teacher Survey
+                    </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary btn-block" type="submit" ng-click="setMode('listBehavior')"><i class="icon ion-plus-round"></i> Add New Behavior</button>
+            </div>
+        </form>
+        <form name="studentProfileStepTwo" ng-if="studentProfile.step==4">
+            <h4>Manage User Permissions</h4>
+            <div class="list-group">
+              <div class="scroll-container scroll-container-md">
+                <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Josh Bezdek</h4>
+                            <p>Para</p>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Josh Bezdek</h4>
+                            <p>Para</p>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Josh Bezdek</h4>
+                            <p>Para</p>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Josh Bezdek</h4>
+                            <p>Para</p>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item"><!--use .active class if needed-->
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">Josh Bezdek</h4>
+                            <p>Para</p>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default"><i class="icon ion-trash-a"></i></button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="form-group">
+              <label for="staffSelect">Select New Staff Member</label>
+                <div>
+                  <select id="staffSelect" class="form-control inline-block width-70">
+                    <option>Staff Member</option>
+                    <option>Name One</option>
+                    <option>Name Two</option>
+                    <option>Name Three</option>
+                    <option>Name Four</option>
+                  </select>
+                  <button class="btn btn-primary ml-10" type="submit"><i class="icon ion-plus-round"></i> Add Member</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="submit" ng-if="studentProfile.step!=4 && studentProfile.mode=='listBehavior'" ng-click="changeStep(studentProfile.step+1)">Save and Continue</button>
+        <button class="btn btn-primary" type="submit" ng-if="studentProfile.step==4" ng-click="saveStudentProfile()">Finish</button>
+        <button class="btn btn-warning pull-left" type="button" ng-if="studentProfile.step!=1 && studentProfile.mode=='listBehavior'" ng-click="changeStep(studentProfile.step-1)">Back</button>
+        <button class="btn btn-warning pull-left" type="button" ng-if="studentProfile.step!=1 && studentProfile.mode=='addNewBehavior'" ng-click="setMode('listBehavior')">Back</button>
+        <button class="btn btn-warning pull-left" type="button" ng-if="studentProfile.step==1" ng-click="cancelStudentProfile()">Cancel</button>
+    </div>
+</div>

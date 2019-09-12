@@ -1,0 +1,27 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Jonny Simms</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="clearfix">
+                    <h4 class="mt-20 pull-left">Observe Frequency and Duration</h4>
+                    <div class="mb-10 pull-right">
+                        <div class="checkbox">
+                            <label>
+                                <input id="realTime" type="checkbox" toggle-button>Real-Time Capture
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list card" ng-repeat="behavior in behaviors">
+            <measure-f-and-d enable-observation="enableObservation" behavior="behavior" real-time="realTime"></measure-f-and-d>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="bar bar-footer bar-royal" observation-manager></div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<!-- profile panel-->
+<div class="profile-panel">
+    <div class="row">
+        <div class="col-sm-2">
+            <img class="img-responsive" src="http://placehold.it/200x200">
+        </div>
+        <div class="col-sm-3">
+            <h2>Josh Bezdek</h2>
+            <h4>Grade 5</h4>
+            <h4><span class="label label-default">Insecure / Anxious</span></h4>
+        </div>
+        <div class="col-sm-4">
+            <h3>Targeted Behaviors</h3>
+            <ul class="list-inline">
+                <li>Yelling</li>
+                <li>Bitting</li>
+                <li>Kicking the table</li>
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <div class="btn-toolbar">
+                <button class="btn btn-primary pull-right" ng-click="$root.goTo('student.manage.profile')"><i class="icon ion-edit"></i> Edit Student Info</button>
+            </div>
+            <div class="btn-toolbar">
+                <button class="btn btn-primary pull-right" ng-click="$root.goTo('student.select')"><i class="icon ion-backspace"></i> Change Student</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- navigation for actions -->
+<nav class="navbar navbar-custom">
+    <div>
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                Observation Tools:
+            </div>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ui-sref-active-eq="active"><a href ui-sref="student.manage.observeFAndD"><i class="icon ion-ios-pulse"></i> Frequency and Duration</a></li>
+                <li ui-sref-active-eq="active"><a href ui-sref="student.manage.observeAbc"><i class="icon ion-ios-grid-view-outline"></i> ABC</a></li>
+                <li ui-sref-active-eq="active"><a href ui-sref="student.manage.observeOnOffTask"><i class="icon ion-ios-alarm-outline text-positive"></i> On / Off Task</a></li>
+                <li ui-sref-active-eq="active"><a href ui-sref="student.manage.dailyBehaviorSheet"><i class="icon ion-ios-list-outline"></i> Daily Behavior Sheet</a></li>
+                <li ui-sref-active-eq="active"><a href ui-sref="student.manage.survey"><i class="icon ion-ios-list-outline"></i> Teacher Survey</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- tab section -->
+<div class="row">
+    <!-- setting the width to 12 for tabs other than dashboard -->
+    <div ng-class="{'col-sm-9':tabs.activeTab=='dashboard','col-sm-12':tabs.activeTab!='dashboard'}">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active" ui-sref-active="active" ui-sref=".dashboard"><a aria-controls="home" role="tab" data-toggle="tab">Dashboard</a></li>
+            <li role="presentation" ui-sref=".prepareFba" ui-sref-active="active"><a role="tab" data-toggle="tab">FBA</a></li>
+            <li role="presentation" ui-sref=".prepareBip" ui-sref-active="active"><a role="tab" data-toggle="tab">BIP</a></li>
+            <li role="presentation" ui-sref=".studentSchedule" ui-sref-active="active"><a role="tab" data-toggle="tab">Schedule</a></li>
+        </ul>
+        <div class="tab-content">
+            <div ui-view="dashboard"></div>
+            <div ui-view="prepareFba"></div>
+            <div ui-view="prepareBip"></div>
+            <div ui-view="studentSchedule"></div>
+        </div>
+    </div>
+    <div class="col-sm-3" ng-if="tabs.activeTab=='dashboard'">
+        <div ng-include src="'template/interventionPanel.html'"></div>
+    </div>
+</div>

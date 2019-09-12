@@ -1,0 +1,15 @@
+<div class="list card text-center" ng-if="intervalManagerConfig.intervalSet===false">
+    <h3>Set an Interval</h3>
+    <h1>{{task.interval}}</h1>
+    <div class="item range range-positive">
+        <i class="icon ion-pinpoint"></i>
+        <input type="range" name="interval" min="15" max="60" value="30" step="15"  ng-model="task.interval" >
+        <i class="icon ion-clock"></i>
+    </div>
+</div>
+<div class="padding" ng-if="intervalManagerConfig.intervalSet===false">
+    <button class="button button-block button-balanced" ng-click="setInterval()">Set Interval</button>
+</div>
+<div class="list card text-center" ng-if="intervalManagerConfig.intervalSet===true">
+    <h1><timer autostart="false" countdown="task.interval" interval="1000">{{countdown}} Seconds</timer></h1>
+</div>

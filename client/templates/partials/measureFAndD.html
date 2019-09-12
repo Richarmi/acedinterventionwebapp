@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="item item-stable text-center">
+            <h4>{{behavior.title}}</h4>
+        </div>
+        <div class="item p-6 mb-10">
+            <div class="row">
+                <div class="col-sm-6 text-center">
+                    <div class="form-group">
+                        <label >Frequency Count
+                            <input type="" class="form-control" id="" placeholder="Add Count">
+                        </label>
+                    </div>
+                    <!--real time option-->
+                    <label >Frequency Count
+                        <div class="mt-0 mb-4"><h3>{{frequencyCounter}}</h3></div>
+                    </label>
+
+                    <div class="">
+                        <button class="button button-outline button-balanced" ng-disabled="enableObservation===false"
+                                ng-click="changeFrequencyCounter('add')">
+                            <i class="icon ion-plus"></i>
+                        </button>
+                        <button class="button button-outline button-assertive"
+                                ng-disabled="enableObservation===false || frequencyCounter==0"
+                                ng-click="changeFrequencyCounter('subtract')">
+                            <i class="icon ion-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <div class="form-group">
+                        <label>
+                            Duration Occurance Count
+                            <input type="" class="form-control" id="" placeholder="Add Count">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Duration Time
+                            <input type="" class="form-control" id="" placeholder="00:00:00">
+                        </label>
+                    </div>
+                    <!--real time option-->
+
+                    <div class="mt-0 mb-4">
+                        <label>Duration <span class="title-count">{{durationCounter}}</span>
+                            <h3>
+                                <timer autostart="false" interval="1000">{{hhours}}:{{mminutes}}:{{sseconds}}</timer>
+                            </h3>
+                        </label>
+                    </div>
+                    <div class="">
+                        <button class="button button-outline button-balanced"
+                                ng-disabled="enableObservation===false || durationStarted" ng-click="startDuration()">
+                            <i class="icon ion-play"></i>
+                        </button>
+                        <button class="button button-outline button-assertive"
+                                ng-disabled="enableObservation===false || !durationStarted" ng-click="endDuration()">
+                            <i class="icon ion-stop"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
