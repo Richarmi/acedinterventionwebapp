@@ -21,7 +21,7 @@
     "bcrypt": "~0.8.1",
     "broadcaster": "~1.0.10",
     "moment": "~2.10.6",
-    "handlebars": "~4.0.0"
+    "handlebars": "~4.7.6"
   },
   "devDependencies": {
     "browser-sync": "~2.11.1",
